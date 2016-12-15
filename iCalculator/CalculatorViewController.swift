@@ -9,6 +9,14 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.hidesBarsOnTap = false
+    }
+    
+    override var prefersStatusBarHidden: Bool { return true } 
 
     @IBOutlet private weak var display: UILabel!
     
@@ -115,11 +123,5 @@ class CalculatorViewController: UIViewController {
             save()
             destinationvc.savedProgram = savedProgram
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.isHidden = true
-        self.navigationController?.hidesBarsOnTap = false
     }
 }

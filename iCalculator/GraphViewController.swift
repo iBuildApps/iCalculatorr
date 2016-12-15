@@ -14,7 +14,6 @@ class GraphViewController: UIViewController, GraphViewDelegate {
     
     var savedProgram: CalculatorBrain.PropertyList?
     
-    
     @IBOutlet var graphView: GraphView! {
         didSet {
             graphView.addGestureRecognizer(UIPanGestureRecognizer(target: self.graphView, action: #selector(graphView.panGestureDetected(recognizer:))))
@@ -41,6 +40,4 @@ class GraphViewController: UIViewController, GraphViewDelegate {
         calculatorBrain.program = savedProgram!
         return calculatorBrain.result
     }
-    
-
 }

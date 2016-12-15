@@ -34,6 +34,7 @@ class GraphView: UIView
         axesDrawer.color = color
         axesDrawer.drawAxesInRect(bounds: rect, origin: origin, pointsPerUnit: pointsPerUnit)
         if drawGraph {
+            color.set()
             pathForGraph().stroke()
         }
     }
@@ -57,22 +58,12 @@ class GraphView: UIView
     }
     
     private func convertPointToViewAxes(_ point: CGPoint) -> (CGPoint) {
-        //print("origen\(origin)")
-        if origin.y > bounds.maxY {
-            let minY = -(bounds.maxY - origin.y)
-            let newY = point.y - minY
-            print(minY, newY)
-            return CGPoint(x: point.x*pointsPerUnit + origin.x, y: (origin.y - point.y*pointsPerUnit  ) )
-            
-        }
-        //print(CGPoint(x: point.x*pointsPerUnit + origin.x, y:origin.y - point.y*pointsPerUnit))
         let checkedPoint = point.y.isNaN ? CGPoint(x:point.x, y: 0) : point
         return CGPoint(x: checkedPoint.x*pointsPerUnit + origin.x, y:origin.y - checkedPoint.y*pointsPerUnit)
     }
     
     private func pathForGraph() -> UIBezierPath {
         let path = UIBezierPath()
-        color.set()
         var startingX: CGFloat?
         var endX: CGFloat?
         if origin.x < bounds.minX {

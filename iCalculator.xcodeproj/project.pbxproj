@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		164757CD1DD8CB3500F91749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164757CC1DD8CB3500F91749 /* AppDelegate.swift */; };
 		164757D41DD8CB3500F91749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 164757D31DD8CB3500F91749 /* Assets.xcassets */; };
-		164757D71DD8CB3500F91749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164757D51DD8CB3500F91749 /* LaunchScreen.storyboard */; };
 		164757E01DD8CBA700F91749 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164757DF1DD8CBA700F91749 /* GraphViewController.swift */; };
 		164757E21DD8CC0700F91749 /* AxesDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164757E11DD8CC0700F91749 /* AxesDrawer.swift */; };
 		1666B3141DDE76D400EAA78C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1666B3131DDE76D400EAA78C /* Main.storyboard */; };
@@ -23,7 +22,6 @@
 		164757C91DD8CB3500F91749 /* iCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		164757CC1DD8CB3500F91749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		164757D31DD8CB3500F91749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		164757D61DD8CB3500F91749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		164757D81DD8CB3500F91749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		164757DF1DD8CBA700F91749 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		164757E11DD8CC0700F91749 /* AxesDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesDrawer.swift; sourceTree = "<group>"; };
@@ -65,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				1666B3131DDE76D400EAA78C /* Main.storyboard */,
-				16B163271DD92AD20095287A /* CalculatorViewController.swift */,
+				16F8FD6C1DFD71F9007F194C /* Calculator  */,
 				167F53D41DE8DC5800289104 /* Graph */,
 				164757DE1DD8CB7C00F91749 /* Supporting Files */,
 			);
@@ -80,7 +78,6 @@
 				16A055F31DE3ACEB0084B1DA /* CalculatorBrainDescription.swift */,
 				164757CC1DD8CB3500F91749 /* AppDelegate.swift */,
 				164757D31DD8CB3500F91749 /* Assets.xcassets */,
-				164757D51DD8CB3500F91749 /* LaunchScreen.storyboard */,
 				164757D81DD8CB3500F91749 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -93,6 +90,14 @@
 				16A7ABF21DD8D06100DB495E /* GraphView.swift */,
 			);
 			name = Graph;
+			sourceTree = "<group>";
+		};
+		16F8FD6C1DFD71F9007F194C /* Calculator  */ = {
+			isa = PBXGroup;
+			children = (
+				16B163271DD92AD20095287A /* CalculatorViewController.swift */,
+			);
+			name = "Calculator ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +160,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				164757D71DD8CB3500F91749 /* LaunchScreen.storyboard in Resources */,
 				164757D41DD8CB3500F91749 /* Assets.xcassets in Resources */,
 				1666B3141DDE76D400EAA78C /* Main.storyboard in Resources */,
 			);
@@ -179,17 +183,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		164757D51DD8CB3500F91749 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				164757D61DD8CB3500F91749 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		164757D91DD8CB3500F91749 /* Debug */ = {
@@ -296,6 +289,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.JosephKubaivanove.iCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,6 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.JosephKubaivanove.iCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

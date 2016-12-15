@@ -159,7 +159,7 @@ class CalculatorBrainDescription
             "7": "\u{2077}",
             "8": "\u{2078}",
             "9": "\u{2079}",
-            ".": "'"
+            ".": "'",
         ]
         var newStr = ""
         for char in str.characters {

@@ -2,8 +2,8 @@
 //  AxesDrawer.swift
 //  Calculator
 //
-//  Created by CS193p Instructor.
-//  Copyright (c) 2015-16 Stanford University. All rights reserved.
+//  Created by Sherlock on 7/30/16.
+//  Copyright © 2016 Joseph Kubaivanove. All rights reserved.
 //
 
 import UIKit
@@ -73,6 +73,7 @@ class AxesDrawer
     
     private func drawHashmarksInRect(bounds: CGRect, origin: CGPoint, pointsPerUnit: CGFloat)
     {
+
         if ((origin.x >= bounds.minX) && (origin.x <= bounds.maxX)) || ((origin.y >= bounds.minY) && (origin.y <= bounds.maxY))
         {
             // figure out how many units each hashmark must represent
@@ -98,7 +99,7 @@ class AxesDrawer
             
             // now create a bounding box inside whose edges those four hashmarks lie
             let bboxSize = pointsPerHashmark * startingHashmarkRadius * 2
-            var bbox = CGRect(center: origin, size: CGSize(width: bboxSize, height: bboxSize))
+            var bbox = CGRect(center: realOrigin!, size: CGSize(width: bboxSize, height: bboxSize))
             
             // formatter for the hashmark labels
             let formatter = NumberFormatter()
